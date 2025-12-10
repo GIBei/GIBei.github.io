@@ -2,76 +2,153 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial=1.0" />
     <title>Название компании</title>
-    <meta name="description" content="Описание вашей компании или услуги." />
+    <meta name="description" content="Описание вашей компании и услуг." />
+
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f7f9fa;
-            color: #222;
+            font-family: "Inter", Arial, sans-serif;
+            background: #f4f8f9;
+            color: #1a1a1a;
         }
+
+        /* HEADER */
         header {
-            background: #0f8f99;
-            padding: 25px;
+            background: linear-gradient(135deg, #0f9aa8, #096f78);
+            padding: 70px 20px;
             text-align: center;
             color: white;
         }
         header h1 {
             margin: 0;
-            font-size: 32px;
-            font-weight: 600;
+            font-size: 42px;
+            font-weight: 700;
         }
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
         .container {
-            max-width: 900px;
-            margin: 30px auto;
+            max-width: 1100px;
+            margin: 40px auto;
             padding: 0 20px;
         }
+
+        /* BLOCK TITLES */
         h2 {
             color: #0f8f99;
-            margin-top: 40px;
+            font-size: 28px;
+            margin-top: 50px;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
+
+        /* SERVICES GRID */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e3e9ea;
+            transition: transform 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+            color: #0f8f99;
+            font-size: 20px;
+        }
+
+        /* CONTACT BLOCK */
+        .contact-box {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid #e3e9ea;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.06);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .contact-box strong {
+            color: #096f78;
+        }
+
+        /* FOOTER */
         footer {
+            margin-top: 60px;
             background: #e9eef0;
-            padding: 20px;
-            margin-top: 40px;
             text-align: center;
-            font-size: 14px;
+            padding: 25px;
+            font-size: 15px;
             color: #555;
         }
+
         a {
             color: #0f8f99;
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <h1>Название компании</h1>
+    <p>Краткий слоган или миссия вашей компании</p>
 </header>
 
 <div class="container">
 
     <h2>О компании</h2>
     <p>
-        Здесь кратко опишите деятельность вашей компании — услуги, продукты, направления.
-        Текст сделан заглушкой, вы можете заменить на нужную информацию.
+        Здесь будет текст о вашей компании. Опишите вашу деятельность, сферу услуг,
+        ключевые преимущества. Этот текст — заглушка, вы позже замените на свой.
     </p>
 
     <h2>Наши услуги</h2>
-    <p>
-        Краткое описание ваших услуг. Можно написать 2–3 предложения.
-    </p>
+
+    <div class="services">
+
+        <div class="service-card">
+            <h3>Услуга №1</h3>
+            <p>Краткое описание услуги. Например: консультации, маркетинг, сервис и т.п.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Услуга №2</h3>
+            <p>Опишите ещё одно направление вашей деятельности.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Услуга №3</h3>
+            <p>Можно написать преимущества, пользу и для кого услуга.</p>
+        </div>
+
+    </div>
 
     <h2>Контакты</h2>
-    <p><strong>Телефон:</strong> +7 (___) ___-__-__</p>
-    <p><strong>Email:</strong> info@вашдомен.kz</p>
-    <p><strong>Адрес:</strong> Ваш юридический адрес</p>
-    <p><strong>График работы:</strong> Пн–Пт, 9:00–18:00</p>
 
-    <h2>Документы</h2>
-    <p><a href="privacy.html">Политика конфиденциальности</a></p>
+    <div class="contact-box">
+        <p><strong>Телефон:</strong> +7 (___) ___-__-__</p>
+        <p><strong>Email:</strong> info@вашдомен.kz</p>
+        <p><strong>Адрес:</strong> Ваш юридический адрес</p>
+        <p><strong>График:</strong> Пн–Пт, 9:00–18:00</p>
+        <p><a href="privacy.html">Политика конфиденциальности</a></p>
+    </div>
 
 </div>
 
