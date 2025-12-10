@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Услуги — PrintShop</title>
+    <meta name="description" content="Полиграфия, наружная реклама, конструкции, печать на ткани и швейные услуги. Полный спектр услуг PrintShop.">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #f4f8f9;
+            color: #1b1f22;
+        }
+
+        /* HEADER */
+        header {
+            background: white;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0f8f99;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #1b1f22;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #0f8f99;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #0f9aa8, #0b6e76);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #0f8f99;
+            margin-bottom: 20px;
+        }
+
+        /* GRID */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.6);
+            border-radius: 20px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #0f8f99;
+            margin-top: 0;
+        }
+
+        /* CTA BUTTONS */
+        .cta {
+            text-align: center;
+            margin: 60px 0 20px;
+        }
+
+        .cta a {
+            padding: 14px 26px;
+            border-radius: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .wa { background: #25D366; }
+        .tg { background: #0088cc; }
+
+        /* FOOTER */
+        footer {
+            background: #dfeff2;
+            padding: 35px;
+            margin-top: 70px;
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+        }
+
+        footer a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #0f8f99;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🖨️ PrintShop</div>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="about.html">О компании</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Наши услуги</h1>
+</section>
+
+<div class="container">
+
+    <div class="services-grid">
+
+        <div class="card">
+            <div class="icon">🖨️</div>
+            <h3>Полиграфия</h3>
+            <p>Визитки, буклеты, листовки, каталоги, календари, меню, журналы, плакаты и любые виды печатной продукции.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📢</div>
+            <h3>Наружная реклама</h3>
+            <p>Вывески, баннеры, объёмные буквы, световые короба, стеллы, фасадные конструкции и витринные наклейки.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏗️</div>
+            <h3>Рекламные конструкции</h3>
+            <p>Информационные стенды, POS-материалы, ростовые фигуры, навигационные системы, интерьерные элементы.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👕</div>
+            <h3>Печать на ткани</h3>
+            <p>Футболки, худи, спецодежда, спортивная форма, флаги, сувенирная продукция и брендирование одежды.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧵</div>
+            <h3>Швейные услуги</h3>
+            <p>Пошив корпоративной формы, брендированной одежды, сувениров, а также ремонт и кастомизация изделий.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📄</div>
+            <h3>Копировальные услуги</h3>
+            <p>Лазерная и струйная печать, сканирование, ламинирование, переплёт и подготовка документов.</p>
+        </div>
+
+    </div>
+
+    <div class="cta">
+        <a class="wa" href="https://wa.me/77017564708" target="_blank">Заказать в WhatsApp</a>
+        <a class="tg" href="https://t.me/printshop2025" target="_blank">Заказать в Telegram</a>
+    </div>
+
+</div>
+
+<footer>
+    <div>
+        <a href="index.html">Главная</a> |
+        <a href="services.html">Услуги</a> |
+        <a href="about.html">О компании</a> |
+        <a href="contacts.html">Контакты</a>
+    </div>
+    <br>
+    © 2025 PrintShop • Все права защищены
+</footer>
+
+</body>
+</html>
