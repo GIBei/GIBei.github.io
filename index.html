@@ -1,147 +1,169 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Название компании</title>
-    <meta name="description" content="Описание вашей компании и услуг." />
-
+    
     <style>
+        /* Загружаем красивый шрифт */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
         body {
             margin: 0;
-            font-family: "Inter", Arial, sans-serif;
-            background: #f4f8f9;
-            color: #1a1a1a;
+            font-family: 'Inter', sans-serif;
+            background: #eaf4f6;
+            color: #1b1f22;
         }
 
-        /* HEADER */
-        header {
-            background: linear-gradient(135deg, #0f9aa8, #096f78);
-            padding: 70px 20px;
+        /* HERO-БЛОК С ГРАДИЕНТОМ */
+        .hero {
+            background: linear-gradient(135deg, #0f9aa8, #0b6e76);
+            padding: 120px 20px;
             text-align: center;
             color: white;
         }
-        header h1 {
+
+        .hero h1 {
+            font-size: 54px;
             margin: 0;
-            font-size: 42px;
             font-weight: 700;
         }
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
+
+        .hero p {
+            font-size: 22px;
             opacity: 0.9;
+            margin-top: 15px;
         }
 
+        /* ОБЩИЙ КОНТЕЙНЕР */
         .container {
-            max-width: 1100px;
-            margin: 40px auto;
+            max-width: 1200px;
+            margin: 60px auto;
             padding: 0 20px;
         }
 
-        /* BLOCK TITLES */
         h2 {
+            font-size: 32px;
             color: #0f8f99;
-            font-size: 28px;
-            margin-top: 50px;
-            margin-bottom: 15px;
-            font-weight: 600;
+            margin-top: 60px;
+            margin-bottom: 20px;
         }
 
-        /* SERVICES GRID */
+        p {
+            line-height: 1.7;
+            font-size: 18px;
+            opacity: 0.85;
+        }
+
+        /* СЕТКА УСЛУГ — GLASSMORPHISM */
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .service-card {
-            background: white;
-            padding: 25px;
-            border-radius: 14px;
-            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.06);
-            border: 1px solid #e3e9ea;
-            transition: transform 0.2s;
+            backdrop-filter: blur(14px);
+            background: rgba(255, 255, 255, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform .25s, box-shadow .25s;
         }
 
         .service-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
         }
 
         .service-card h3 {
-            margin-top: 0;
             color: #0f8f99;
-            font-size: 20px;
+            font-size: 22px;
+            margin-top: 0;
         }
 
-        /* CONTACT BLOCK */
+        /* ИКОНКИ (CSS минимализм) */
+        .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* CONTACT BLOCK — PREMIUM */
         .contact-box {
             background: white;
-            padding: 25px;
-            border-radius: 14px;
-            border: 1px solid #e3e9ea;
-            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.06);
-            font-size: 18px;
-            line-height: 1.8;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 1px solid #dfecec;
+            font-size: 20px;
+            line-height: 1.7;
         }
 
         .contact-box strong {
-            color: #096f78;
+            color: #0b6f78;
         }
 
         /* FOOTER */
         footer {
-            margin-top: 60px;
-            background: #e9eef0;
+            margin-top: 80px;
             text-align: center;
-            padding: 25px;
-            font-size: 15px;
+            padding: 30px;
+            background: #dfeff2;
             color: #555;
+            font-size: 16px;
         }
 
         a {
             color: #0f8f99;
+            font-weight: 600;
         }
     </style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<section class="hero">
     <h1>Название компании</h1>
-    <p>Краткий слоган или миссия вашей компании</p>
-</header>
+    <p>Современные решения для вашего бизнеса</p>
+</section>
 
 <div class="container">
 
     <h2>О компании</h2>
     <p>
-        Здесь будет текст о вашей компании. Опишите вашу деятельность, сферу услуг,
-        ключевые преимущества. Этот текст — заглушка, вы позже замените на свой.
+        Здесь вы сможете разместить информацию о вашей компании, миссию, направление деятельности,
+        преимущества. Этот блок оформлен современно, с увеличенной типографикой и премиум-отступами.
     </p>
 
     <h2>Наши услуги</h2>
 
     <div class="services">
-
         <div class="service-card">
+            <div class="icon">💼</div>
             <h3>Услуга №1</h3>
-            <p>Краткое описание услуги. Например: консультации, маркетинг, сервис и т.п.</p>
+            <p>Современное решение для бизнеса. Опишите кратко, чем вы занимаетесь.</p>
         </div>
 
         <div class="service-card">
+            <div class="icon">⚙️</div>
             <h3>Услуга №2</h3>
-            <p>Опишите ещё одно направление вашей деятельности.</p>
+            <p>Преимущества, выгоды, особенности — структурировано, красиво и читабельно.</p>
         </div>
 
         <div class="service-card">
+            <div class="icon">📊</div>
             <h3>Услуга №3</h3>
-            <p>Можно написать преимущества, пользу и для кого услуга.</p>
+            <p>Описание третьего направления деятельности. Все карточки выполнены в glass стиле.</p>
         </div>
-
     </div>
 
     <h2>Контакты</h2>
-
     <div class="contact-box">
         <p><strong>Телефон:</strong> +7 (___) ___-__-__</p>
         <p><strong>Email:</strong> info@вашдомен.kz</p>
